@@ -1,0 +1,71 @@
+.container {
+  height: 100vh;
+}
+
+.menu {
+  background-color: black;
+  height: 100px;
+  border-bottom: 1px white;
+}
+.menu img {
+  width: 100px;
+}
+.menu ul {
+  color: white;
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  width: 400px;
+  float: right;
+  margin-top: 40px;
+}
+.menu ul li {
+  flex-grow: 1;
+  font-family: "Montserrat", sans-serif;
+}
+
+.l1 {
+  background-size: cover;
+  height: 100vh;
+}
+.l1 h1 {
+  font-size: 100px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 300px;
+}
+
+@media screen and (min-width: 720px) {
+  .menu ul {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu ul {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 720px) {
+  .l1 h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .l1 h1 {
+    font-size: 6em;
+  }
+}
+.l2 {
+  background-color: white;
+  height: 100vh;
+}
+.l2 h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
