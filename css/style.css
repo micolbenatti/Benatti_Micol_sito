@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  height: 400vh;
 }
 
 .menu {
@@ -24,17 +24,88 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.menu ul li:hover {
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .l1 {
   background-color: black;
-  height: 100vh;
+  height: 90vh;
+  border-bottom: 1px solid white;
 }
 .l1 h1 {
-  font-size: 500px;
+  font-size: 400px;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  text-align: center;
   padding-top: 300px;
+}
+
+.col1 {
+  background-color: black;
+  height: 90vh;
+  width: 50%;
+  border-right: 1px solid white;
+  float: left;
+  border-bottom: 1px solid white;
+}
+.col1 h2 {
+  padding-top: 570px;
+  padding-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  color: white;
+}
+
+.col2 {
+  height: 90vh;
+  width: 49.9%;
+  background-color: black;
+  float: right;
+  border-bottom: 1px solid white;
+}
+.col2 p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.3em;
+  width: 90%;
+  font-size: 20px;
+  padding-top: 400px;
+  margin: 30px;
+}
+.col2 button {
+  border: 1px solid white;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 18px;
+  float: left;
+  width: 150px;
+  height: 50px;
+  margin-left: 30px;
+  border-radius: 50px;
+}
+
+.col2 button:hover {
+  cursor: pointer;
+  border: 1px solid yellow;
+  color: yellow;
+  font-size: 20px;
+}
+
+.l2 {
+  background-color: black;
+  height: 90vh;
+  float: left;
+  width: 100%;
+}
+.l2 h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  color: white;
+  padding-top: 570px;
+  padding-left: 20px;
 }
 
 @media screen and (min-width: 720px) {
@@ -47,15 +118,6 @@
     font-size: 1.2em;
   }
 }
-.l2 {
-  background-color: white;
-  height: 100vh;
-}
-.l2 h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 80px;
-}
-
 
 
 /*# sourceMappingURL=style.css.map */
