@@ -80,7 +80,7 @@ $font-base: 'Montserrat', sans-serif;
       font-family: $font-base;
       color:$color-white;
       font-size: 18px;
-      float:left;
+      float:center;
       width:150px;
       height:50px;
       margin-left:30px;
@@ -102,6 +102,36 @@ $font-base: 'Montserrat', sans-serif;
       padding-top: 570px;
       padding-left: 20px;
     }
+  }
+
+  .galleria{
+  border: 1px solid darkgrey;
+    img{
+      width:100%;
+      height:230px;
+    }
+  }
+
+  .galleria:hover{border: 5px solid yellow;}
+
+  .desc{
+    padding:15px;
+    text-align:center;
+    font-family: $font-base;
+    color:$color-white;
+  }
+
+  .desc:hover{font-weight: 700; color:yellow; cursor:pointer;}
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .progetti{
+    padding: 0 6px;
+    width: 25%;
+    margin-top: 150px;
+    float:left;
   }
 
   @media screen and (min-width: 720px) {
