@@ -72,8 +72,14 @@
   line-height: 1.3em;
   width: 90%;
   font-size: 20px;
-  padding-top: 400px;
+  padding-top: 350px;
   margin: 30px;
+}
+.col2 .panel {
+  padding-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .col2 button {
   border: 1px solid white;
@@ -86,6 +92,10 @@
   height: 50px;
   margin-left: 30px;
   border-radius: 50px;
+}
+
+.active {
+  max-height: 200px;
 }
 
 .col2 button:hover {
@@ -228,6 +238,6 @@
     font-size: 1.2em;
   }
 }
-
+/* # sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

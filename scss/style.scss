@@ -72,8 +72,14 @@ $font-base: 'Montserrat', sans-serif;
       line-height: 1.3em;
       width: 90%;
       font-size: 20px;
-      padding-top: 400px;
+      padding-top: 350px;
       margin:30px;
+    }
+    .panel{
+      padding-top: 0;
+      max-height:0;
+      overflow:hidden; 
+      transition: all 1s cubic-bezier(.215, .61, .355, 1);
     }
     button{
       border: 1px solid white;
@@ -88,6 +94,8 @@ $font-base: 'Montserrat', sans-serif;
       border-radius:50px;
     }
   }
+
+  .active{max-height:200px;}
 
   .col2 button:hover{cursor: pointer; border: 2px solid $color-yellow; color: $color-yellow; font-size:20px;}
 
@@ -231,5 +239,5 @@ $font-base: 'Montserrat', sans-serif;
 
 
 
-  /*# sourceMappingURL=style.css.map */
+  /* # sourceMappingURL=style.css.map */
   
