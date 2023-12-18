@@ -94,8 +94,9 @@
   border-radius: 50px;
 }
 
-.active {
+.panel.active {
   max-height: 200px;
+  overflow: visible;
 }
 
 .col2 button:hover {
