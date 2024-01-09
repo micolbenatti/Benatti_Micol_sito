@@ -23,8 +23,12 @@
   flex-grow: 1;
   font-family: "Montserrat", sans-serif;
 }
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
 
-.menu ul li:hover {
+.menu ul li a:hover {
   font-weight: 700;
   cursor: pointer;
   color: yellow;
@@ -47,7 +51,6 @@
   background-color: black;
   height: 90vh;
   width: 50%;
-  border-right: 1px solid white;
   float: left;
   border-bottom: 1px solid white;
 }
@@ -61,7 +64,7 @@
 
 .col2 {
   height: 90vh;
-  width: 49.9%;
+  width: 50%;
   background-color: black;
   float: right;
   border-bottom: 1px solid white;
@@ -87,15 +90,15 @@
   font-family: "Montserrat", sans-serif;
   color: white;
   font-size: 18px;
-  float: center;
+  float: left;
   width: 150px;
   height: 50px;
-  margin-left: 30px;
+  margin-top: 0px;
   border-radius: 50px;
 }
 
 .panel.active {
-  max-height: 210px;
+  max-height: 500px;
   overflow: visible;
 }
 

@@ -25,11 +25,15 @@ $font-base: 'Montserrat', sans-serif;
       li {
         flex-grow: 1;
         font-family: $font-base;
+      a{
+        text-decoration: none;
+        color: $color-white;
+      }
       }
     }   
   }
 
-  .menu ul li:hover{font-weight: 700; cursor: pointer; color:$color-yellow;}
+  .menu ul li a:hover{font-weight: 700; cursor: pointer; color:$color-yellow;}
 
   .l1 {
     background-color: $color-black;
@@ -48,7 +52,6 @@ $font-base: 'Montserrat', sans-serif;
     background-color: $color-black;
     height: 90vh;
     width: 50%;
-    border-right:1px solid white;
     float:left;
     border-bottom: 1px solid white;
     h2 {
@@ -62,7 +65,7 @@ $font-base: 'Montserrat', sans-serif;
 
   .col2{
     height: 90vh;
-    width: 49.9%;
+    width: 50%;
     background-color: $color-black;
     float:right;
     border-bottom: 1px solid white;
@@ -87,15 +90,15 @@ $font-base: 'Montserrat', sans-serif;
       font-family: $font-base;
       color:$color-white;
       font-size: 18px;
-      float:center;
+      float:left;
       width:150px;
       height:50px;
-      margin-left:30px;
+      margin-top:0px;
       border-radius:50px;
     }
   }
 
-  .panel.active{max-height:210px; overflow: visible;}
+  .panel.active{max-height:500px; overflow: visible;}
 
   .col2 button:hover{cursor: pointer; border: 2px solid $color-yellow; color: $color-yellow; font-size:20px;}
 
