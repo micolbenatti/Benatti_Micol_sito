@@ -95,7 +95,7 @@ $font-base: 'Montserrat', sans-serif;
     }
   }
 
-  .active{max-height:200px;}
+  .panel.active{max-height:200px;}
 
   .col2 button:hover{cursor: pointer; border: 2px solid $color-yellow; color: $color-yellow; font-size:20px;}
 

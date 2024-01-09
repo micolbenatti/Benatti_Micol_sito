@@ -94,7 +94,7 @@
   border-radius: 50px;
 }
 
-.active {
+.panel.active {
   max-height: 200px;
 }
 
