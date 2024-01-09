@@ -95,8 +95,7 @@
 }
 
 .panel.active {
-  max-height: 200px;
-  overflow: visible;
+  max-height: 210px;
 }
 
 .col2 button:hover {
