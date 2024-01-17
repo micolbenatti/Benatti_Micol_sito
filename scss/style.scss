@@ -35,6 +35,12 @@ $font-base: 'Montserrat', sans-serif;
 
   .menu ul li a:hover{font-weight: 700; cursor: pointer; color:$color-yellow;}
 
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
   .l1 {
     background-color: $color-black;
     height: 90vh;
@@ -54,6 +60,7 @@ $font-base: 'Montserrat', sans-serif;
     width: 50%;
     float:left;
     border-bottom: 1px solid white;
+    border-right:1px solid white;
     h2 {
       padding-top: 570px;
       padding-left: 20px;
@@ -67,7 +74,8 @@ $font-base: 'Montserrat', sans-serif;
     height: 90vh;
     width: 50%;
     background-color: $color-black;
-    float:right;
+    display: flex;
+    align-items:flex-end;
     border-bottom: 1px solid white;
     p{
       color: $color-white;
@@ -79,28 +87,27 @@ $font-base: 'Montserrat', sans-serif;
       margin:30px;
     }
     .panel{
+      margin-left:0px;
       padding-top: 0;
       max-height:0;
       overflow:hidden; 
-      transition: all 1s cubic-bezier(.215, .61, .355, 1);
+      transition: toggle 2s cubic-bezier(.215, .61, .355, 1);
     }
     button{
       border: 1px solid white;
       background-color: $color-black;
       font-family: $font-base;
       color:$color-white;
-      font-size: 18px;
-      float:left;
-      width:150px;
-      height:50px;
-      margin-top:0px;
+      font-size: 20px;
+      width:200px;
+      height:70px;
       border-radius:50px;
     }
   }
 
-  .panel.active{max-height:500px; overflow: visible;}
+  .panel.active{margin-bottom:150px; max-height:400px; overflow: visible; margin-left:-620px; width:500px;}
 
-  .col2 button:hover{cursor: pointer; border: 2px solid $color-yellow; color: $color-yellow; font-size:20px;}
+  .col2 button:hover{cursor: pointer; border: 2px solid $color-yellow; color: $color-yellow; font-size:22px;}
 
   .l2{
     background-color: $color-black;
@@ -147,7 +154,7 @@ $font-base: 'Montserrat', sans-serif;
     float:left;
   }
 
-  .l3{
+  /*.l3{
     background-color: $color-black;
     height:90vh;
     float:left;
@@ -176,10 +183,7 @@ $font-base: 'Montserrat', sans-serif;
     text-align: center;
     margin-top:-130px;
   }
-
-
-
-
+  */
 
 
 

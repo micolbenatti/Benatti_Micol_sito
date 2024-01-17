@@ -34,6 +34,12 @@
   color: yellow;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .l1 {
   background-color: black;
   height: 90vh;
@@ -53,6 +59,7 @@
   width: 50%;
   float: left;
   border-bottom: 1px solid white;
+  border-right: 1px solid white;
 }
 .col1 h2 {
   padding-top: 570px;
@@ -66,7 +73,8 @@
   height: 90vh;
   width: 50%;
   background-color: black;
-  float: right;
+  display: flex;
+  align-items: flex-end;
   border-bottom: 1px solid white;
 }
 .col2 p {
@@ -79,34 +87,36 @@
   margin: 30px;
 }
 .col2 .panel {
+  margin-left: 0px;
   padding-top: 0;
   max-height: 0;
   overflow: hidden;
-  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: toggle 2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .col2 button {
   border: 1px solid white;
   background-color: black;
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: 18px;
-  float: left;
-  width: 150px;
-  height: 50px;
-  margin-top: 0px;
+  font-size: 20px;
+  width: 200px;
+  height: 70px;
   border-radius: 50px;
 }
 
 .panel.active {
-  max-height: 500px;
+  margin-bottom: 150px;
+  max-height: 400px;
   overflow: visible;
+  margin-left: -620px;
+  width: 500px;
 }
 
 .col2 button:hover {
   cursor: pointer;
   border: 2px solid yellow;
   color: yellow;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .l2 {
@@ -160,36 +170,36 @@
   float: left;
 }
 
-.l3 {
-  background-color: black;
-  height: 90vh;
-  float: left;
-  width: 100%;
-  padding-top: 560px;
-}
-.l3 a {
-  text-decoration: none;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 80px;
-  padding-left: 20px;
+/*.l3{
+  background-color: $color-black;
+  height:90vh;
+  float:left;
+  width:100%;
+  padding-top:560px;
+  a{
+    text-decoration: none;
+    color: $color-white;
+    font-family: $font-base;
+    font-size:80px;
+    padding-left:20px;
+  }
 }
 
 #counter {
   font-size: 80px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-  border: 3px solid yellow;
-  color: yellow;
+  font-family: $font-base;
+  border: 3px solid $color-yellow;
+  color: $color-yellow;
   padding: 0.4em;
-  width: 150px;
-  height: 150px;
+  width:150px;
+  height:150px;
   border-radius: 100%;
-  margin-left: 700px;
+  margin-left:700px;
   text-align: center;
-  margin-top: -130px;
+  margin-top:-130px;
 }
-
+*/
 @media screen and (max-width: 700px) {
   .progetti {
     width: 49.5%;
