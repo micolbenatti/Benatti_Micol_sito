@@ -3,248 +3,247 @@ $color-white: white;
 $color-yellow: yellow;
 $font-base: 'Montserrat', sans-serif;
 
-.container {
-    height: auto;
-  }
+
+* {
+  box-sizing: border-box;
+}
+
+.containter{
+  height: auto;
+  overflow: hidden;
+  background-color: $color-black;
+}
   
-  .menu {
-    background-color: $color-black;
-    height: 100px;
-    border-bottom:1px solid $color-white ;
-    img {
-      width: 100px;
-    }
-    ul {
-      color: $color-white;
-      display: flex;
-      list-style: none;
-      padding: 0px; 
-      width: 400px;
-      float: right;
-      margin-top: 40px;
-      li {
-        flex-grow: 1;
-        font-family: $font-base;
-      a{
+.navbar {
+  background-color: $color-black;
+  height: auto;
+  border-bottom: 1px solid $color-white;
+  position: fixed;
+  width:100%;
+  display: flex;
+  align-items: center;
+  img {
+    width: 6em;
+  }
+}
+
+.menu{
+  width:100%;
+  position:absolute;
+  ul {
+    color: $color-white;
+    list-style: none;
+    width:400px;
+    display: flex;
+    position:relative;
+    float:right;
+    text-align: center;
+    font-size: 1.2em;
+    li {
+      flex-grow: 1;
+      font-family: $font-base;
+      a {
         text-decoration: none;
         color: $color-white;
       }
-      }
-    }   
+    }
   }
+}
 
-  .menu ul li a:hover{font-weight: 700; cursor: pointer; color:$color-yellow;}
+.menu ul li a:hover {
+  font-weight: 700;
+  cursor: pointer;
+  color: $color-yellow;
+}
 
-  .sticky {
-    position: fixed;
-    top: 0;
+.l1 {
+  background-color: $color-black;
+  height: 100vh;
+  border-bottom: 1px solid $color-white;
+  display: flex;
+  align-items: end;
+  h1 {
+    font-size: 400px;
+    color: $color-white;
+    font-family: $font-base;
+    font-weight: 700;
+  }
+}
+
+.col1 {
+  background-color: $color-black;
+  height: 100vh;
+  width: 50%;
+  float: left;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  h2 {
+    padding-top: 570px;
+    padding-left: 20px;
+    font-family: $font-base;
+    font-size: 80px;
+    color: $color-white;
+  }
+}
+
+.col2 {
+  height: 100vh;
+  width: 50%;
+  background-color: $color-black;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid white;
+  p {
+    color: $color-white;
+    font-family: $font-base;
+    line-height: 1.3em;
+    width: 90%;
+    font-size: 20px;
+    padding-top: 350px;
+    margin: 30px;
+  }
+  .panel {
+    margin-left: 0px;
+    padding-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: toggle 2s cubic-bezier(.215, .61, .355, 1);
+  }
+  button {
+    border: 1px solid white;
+    background-color: $color-black;
+    font-family: $font-base;
+    color: $color-white;
+    font-size: 20px;
+    width: 200px;
+    height: 70px;
+    border-radius: 50px;
+  }
+}
+
+.panel.active {
+  margin-bottom: 150px;
+  max-height: 400px;
+  overflow: visible;
+  margin-left: -620px;
+  width: 500px;
+}
+
+.col2 button:hover {
+  cursor: pointer;
+  border: 2px solid $color-yellow;
+  color: $color-yellow;
+  font-size: 22px;
+}
+
+.l2 {
+  background-color: $color-black;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid $color-white;
+  h2 {
+    font-family: $font-base;
+    font-size: 80px;
+    color: white;
+    padding-top: 560px;
+    padding: 50px 20px 50px 20px;
+  }
+}
+
+.galleria {
+  border: 1px solid darkgrey;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &:hover {
+    border: 5px solid $color-yellow;
+  }
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+  font-family: $font-base;
+  color: $color-white;
+}
+
+.desc:hover {
+  font-weight: 700;
+  color: $color-yellow;
+  cursor: pointer;
+}
+
+.progetti {
+  padding: 0 6px;
+  width: 25%;
+  margin-top: 150px;
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+  .progetti {
+    width: 49.5%;
+    margin: 6px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .progetti {
     width: 100%;
   }
+}
 
-  .l1 {
-    background-color: $color-black;
-    height: 90vh;
-    border-bottom: 1px solid $color-white;
-    h1 {
-      font-size: 400px;
-      color: $color-white;
-      font-family: $font-base;
-      font-weight: 700;
-      padding-top: 300px;
-    }
+@media (max-width: 720px) {
+  .navbar img{
+    width: 5em;
   }
-  
-  .col1 {
-    background-color: $color-black;
-    height: 90vh;
-    width: 50%;
-    float:left;
-    border-bottom: 1px solid white;
-    border-right:1px solid white;
-    h2 {
-      padding-top: 570px;
-      padding-left: 20px;
-      font-family: $font-base;
-      font-size: 80px;
-      color: $color-white;
-    }
+  .menu ul {
+    font-size: 1em;
+    width: 300px;
   }
-
-  .col2{
-    height: 90vh;
-    width: 50%;
-    background-color: $color-black;
-    display: flex;
-    align-items:flex-end;
-    border-bottom: 1px solid white;
-    p{
-      color: $color-white;
-      font-family: $font-base;
-      line-height: 1.3em;
-      width: 90%;
-      font-size: 20px;
-      padding-top: 350px;
-      margin:30px;
-    }
-    .panel{
-      margin-left:0px;
-      padding-top: 0;
-      max-height:0;
-      overflow:hidden; 
-      transition: toggle 2s cubic-bezier(.215, .61, .355, 1);
-    }
-    button{
-      border: 1px solid white;
-      background-color: $color-black;
-      font-family: $font-base;
-      color:$color-white;
-      font-size: 20px;
-      width:200px;
-      height:70px;
-      border-radius:50px;
-    }
+  .menu ul li{
+    flex-grow: 0.5;
   }
-
-  .panel.active{margin-bottom:150px; max-height:400px; overflow: visible; margin-left:-620px; width:500px;}
-
-  .col2 button:hover{cursor: pointer; border: 2px solid $color-yellow; color: $color-yellow; font-size:22px;}
-
-  .l2{
-    background-color: $color-black;
-    height: 90vh;
-    float:left;
-    width:100%;
-    border-bottom: 1px solid $color-white;
-    h2{
-      font-family: $font-base;
-      font-size:80px;
-      color:white;
-      padding-top: 560px;
-      padding-left: 20px;
-    }
+  .l1 h1 {
+    font-size: 400px;
   }
-
-  .galleria{
-  border: 1px solid darkgrey;
-    img{
-      width:100%;
-      height:auto;
-    }
+  .l2 h2{
+    font-size: 60px;
   }
+}
 
-  .galleria:hover{border: 5px solid $color-yellow;}
+/* # sourceMappingURL=style.css.map */
 
-  .desc{
-    padding:15px;
-    text-align:center;
+/*.l3{
+  background-color: $color-black;
+  height:90vh;
+  float:left;
+  width:100%;
+  padding-top:560px;
+  a{
+    text-decoration: none;
+    color: $color-white;
     font-family: $font-base;
-    color:$color-white;
+    font-size:80px;
+    padding-left:20px;
   }
+}
 
-  .desc:hover{font-weight: 700; color:$color-yellow; cursor:pointer;}
-
-  * {
-    box-sizing: border-box;
-  }
-
-  .progetti{
-    padding: 0 6px;
-    width: 25%;
-    margin-top: 150px;
-    float:left;
-  }
-
-  /*.l3{
-    background-color: $color-black;
-    height:90vh;
-    float:left;
-    width:100%;
-    padding-top:560px;
-    a{
-      text-decoration: none;
-      color: $color-white;
-      font-family: $font-base;
-      font-size:80px;
-      padding-left:20px;
-    }
-  }
-
-  #counter {
-    font-size: 80px;
-    font-weight: bold;
-    font-family: $font-base;
-    border: 3px solid $color-yellow;
-    color: $color-yellow;
-    padding: 0.4em;
-    width:150px;
-    height:150px;
-    border-radius: 100%;
-    margin-left:700px;
-    text-align: center;
-    margin-top:-130px;
-  }
-  */
-
-
-
-  @media screen and (max-width: 700px) {
-    .progetti {
-      width: 49.5%;
-      margin: 6px 0;
-    }
-  }
-  
-  @media screen and (max-width: 500px) {
-    .progetti {
-      width: 100%;
-    }
-  }
-
-  @media screen and (min-width: 500px) {
-    .menu ul {
-      font-size: 1em;
-      width:280px;
-    }
-    .menu ul li {
-      flex-grow: 0.5;
-    }
-    .menu img {
-      width:90px;
-    }
-    .l1{
-      height: 80vh;
-    }
-    .l1 h1 {
-      font-size: 300px;
-    }
-  }
-
-  @media screen and (min-width: 720px) {
-    .menu ul {
-      font-size: 1em;
-      width:350px;
-    }
-    .menu ul li {
-      flex-grow: 1;
-    }
-    .menu img {
-      width:100px;
-    }
-    .l1{
-      height: 90vh;
-    }
-    .l1 h1 {
-      font-size: 400px;
-    }
-    }
-
-  @media screen and (min-width: 1024px) {
-    .menu ul {
-      font-size: 1.2em;
-    }
-  }
-
-
-
-  /* # sourceMappingURL=style.css.map */
-  
+#counter {
+  font-size: 80px;
+  font-weight: bold;
+  font-family: $font-base;
+  border: 3px solid $color-yellow;
+  color: $color-yellow;
+  padding: 0.4em;
+  width:150px;
+  height:150px;
+  border-radius: 100%;
+  margin-left:700px;
+  text-align: center;
+  margin-top:-130px;
+}
+*/
