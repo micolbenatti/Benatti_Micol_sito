@@ -6,16 +6,15 @@ $font-base: 'Montserrat', sans-serif;
 
 * {
   box-sizing: border-box;
+  background-color: $color-black;
 }
 
 .containter{
   height: auto;
   overflow: hidden;
-  background-color: $color-black;
 }
   
 .navbar {
-  background-color: $color-black;
   height: auto;
   border-bottom: 1px solid $color-white;
   position: fixed;
@@ -24,6 +23,7 @@ $font-base: 'Montserrat', sans-serif;
   align-items: center;
   img {
     width: 6em;
+    z-index: 1;
   }
 }
 
@@ -57,7 +57,6 @@ $font-base: 'Montserrat', sans-serif;
 }
 
 .l1 {
-  background-color: $color-black;
   height: 100vh;
   border-bottom: 1px solid $color-white;
   display: flex;
@@ -71,15 +70,15 @@ $font-base: 'Montserrat', sans-serif;
 }
 
 .col1 {
-  background-color: $color-black;
   height: 100vh;
   width: 50%;
   float: left;
+  display: flex;
+  align-items: end;
   border-bottom: 1px solid white;
   border-right: 1px solid white;
   h2 {
-    padding-top: 570px;
-    padding-left: 20px;
+    padding: 0 0 20px 20px;
     font-family: $font-base;
     font-size: 80px;
     color: $color-white;
@@ -91,23 +90,21 @@ $font-base: 'Montserrat', sans-serif;
   width: 50%;
   background-color: $color-black;
   display: flex;
-  align-items: flex-end;
+  align-items: end;
   border-bottom: 1px solid white;
   p {
     color: $color-white;
     font-family: $font-base;
     line-height: 1.3em;
-    width: 90%;
     font-size: 20px;
-    padding-top: 350px;
     margin: 30px;
   }
   .panel {
-    margin-left: 0px;
     padding-top: 0;
     max-height: 0;
     overflow: hidden;
-    transition: toggle 2s cubic-bezier(.215, .61, .355, 1);
+    transition: toggle 2s;
+    width:100%;
   }
   button {
     border: 1px solid white;
@@ -122,11 +119,28 @@ $font-base: 'Montserrat', sans-serif;
 }
 
 .panel.active {
-  margin-bottom: 150px;
-  max-height: 400px;
+  max-height: 100vh;
   overflow: visible;
-  margin-left: -620px;
-  width: 500px;
+}
+
+@media (max-width:992px){
+  .col1{
+    width:100%;
+    h2{
+      font-size: 70px;
+    }
+  }
+  .col2{
+    width:100%;
+    .panel{
+      transform: translate(-200px, -100px);
+    }
+    button{
+      width: 150px;
+      font-size: 18px;
+      height: 50px;
+    }
+  }
 }
 
 .col2 button:hover {
@@ -136,67 +150,55 @@ $font-base: 'Montserrat', sans-serif;
   font-size: 22px;
 }
 
-.l2 {
-  background-color: $color-black;
-  float: left;
-  width: 100%;
-  border-bottom: 1px solid $color-white;
-  h2 {
-    font-family: $font-base;
-    font-size: 80px;
-    color: white;
-    padding-top: 560px;
-    padding: 50px 20px 50px 20px;
-  }
-}
-
-.galleria {
-  border: 1px solid darkgrey;
-  img {
-    width: 100%;
-    height: auto;
-  }
-  &:hover {
-    border: 5px solid $color-yellow;
-  }
-}
-
-.desc {
-  padding: 15px;
-  text-align: center;
-  font-family: $font-base;
-  color: $color-white;
-}
-
-.desc:hover {
-  font-weight: 700;
-  color: $color-yellow;
-  cursor: pointer;
-}
-
-.progetti {
-  padding: 0 6px;
-  width: 25%;
-  margin-top: 150px;
-  float: left;
+.gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-@media screen and (max-width: 900px) {
-  .progetti {
-    width: 49.5%;
-    margin: 6px 0;
+.card {
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column; /* Cambia direzione flessibile a colonna */
+    align-items: center;
+  } 
+  .card {
+    width: calc(100% - 40px);
   }
 }
 
-@media screen and (max-width: 500px) {
-  .progetti {
-    width: 100%;
+.titpro{
+  width:100%;
+  h2 {
+  font-family: $font-base;
+  font-size: 80px;
+  color: white;
+  padding: 50px 20px 50px 20px;
+  display: flex;
+  justify-content:left;
+  align-items: end;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .navbar img{
     width: 5em;
   }
@@ -208,7 +210,7 @@ $font-base: 'Montserrat', sans-serif;
     flex-grow: 0.5;
   }
   .l1 h1 {
-    font-size: 400px;
+    font-size: 300px;
   }
   .l2 h2{
     font-size: 60px;
