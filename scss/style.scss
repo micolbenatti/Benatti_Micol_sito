@@ -139,6 +139,9 @@ $font-base: 'Montserrat', sans-serif;
       width: 150px;
       font-size: 18px;
       height: 50px;
+      &:hover{
+        font-size:20px;
+      }
     }
   }
 }
@@ -147,19 +150,24 @@ $font-base: 'Montserrat', sans-serif;
   cursor: pointer;
   border: 2px solid $color-yellow;
   color: $color-yellow;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 150px;
 }
 
 .card {
   width: 300px;
   margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid $color-white;
+  &:hover{
+    border:3px solid $color-yellow;
+    cursor: pointer; 
+  }
 }
 
 .card img {
@@ -169,10 +177,19 @@ $font-base: 'Montserrat', sans-serif;
 
 .card-content {
   padding: 20px;
+  h2 {
+    margin-top: 0;
+    color: $color-white;
+    font-family: $font-base;
+    text-align: center;
+    font-size:1.2em;
+  }
 }
 
-.card-content h2 {
-  margin-top: 0;
+.card-content h2:hover{
+  color: $color-yellow;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
